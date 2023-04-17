@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>System Integration - Intel ad-rss-lib</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "System Integration";
+        var mkdocs_page_input_path = "ad_rss/HLD-ArchitectureOverview.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Intel ad-rss-lib
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../RELEASE_NOTES_AND_DISCLAIMERS/">Release Notes and Disclaimer</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Background</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HLD-KeyDesignDecisionsAndAlternatives/">Design Discussions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UnstructuredConstellations/">Unstructured Constellations</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">System Integration</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HLD-Safety/">Safety</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HLD-Security/">Security</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Appendix-ParameterDiscussion/">Parameter Discussion</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SupportedRssFeatures/">Supported RSS Features</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Map Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ad_rss_map_integration/Main/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ad_rss_map_integration/ConstructRSSScenes/">Construction of the RSS Scenes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ad_rss_map_integration/HandleRoadBoundaries/">Handling of road boundaries</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Building</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../BUILDING/">General build instructions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ad_rss_python/">Core Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ad_rss_map_integration/ad_rss_map_integration_python/">Map Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Doxygen</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/index.html">Core Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss_map_integration/index.html">Map Integration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code Coverage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="https://intel.github.io/ad-rss-lib/coverage/ad_rss/">Core Library</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://intel.github.io/ad-rss-lib/coverage/ad_rss_map_integration/">Map Integration</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../FAQ/">FAQ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Changelog</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Intel ad-rss-lib</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Background &raquo;</li>
+      <li>System Integration</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/intel/ad-rss-lib/edit/master/doc/ad_rss/HLD-ArchitectureOverview.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1>RSS System Architecture Overview</h1>
+<p>This section sketches the integration of RSS into a exisiting system architecture.</p>
+<h2 id="overview-sense-plan-act-rss">Overview: Sense, Plan, Act, RSS<a class="headerlink" href="#overview-sense-plan-act-rss" title="Permanent link">&para;</a></h2>
+<p>From high level view the architecture of an Automated Driving System (ADS) consists of three main subsystems: Sense, Plan, Act. The world model data
+provided by the <em>Sense Subsystem</em> is used by the <em>Plan Subsystem</em> to create the near term actuator control commands executed by the
+<em>Act Subsystem</em>.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="" src="../../images/ad-rss-lib-Integrate_Into_Sense-Plan-Act.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Integration of RSS into a generic system architecture of an Automated Driving System</em></td>
+</tr>
+</tbody>
+</table>
+<p>RSS is integrated into such an ADS architecture by placing it in parallel to the Plan. To provide a safety envelope
+around the planning output the integration of RSS into a ADS architecture spans into the <em>Sense Subsystem</em> to provide the
+required RSS world model data as well as into the <em>Act Subsystem</em> to limit the actuator control commands to the RSS
+restrictions.</p>
+<p>The <em>Sense Subsystem</em> gathers information on the environment required to fulfill the ADS task. In general there exist several
+level of perception and fusion which enrich the world model to the extend required for the planning algorithms. In this
+high-level architecture overview the <em>Sense Subsystem</em> takes over this task. That sketches a slightly different view:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="" src="../../images/ad-rss-lib-Integrate_Into_Sense-Plan-Act-2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>RSS foccussed view on the Integration of RSS into a ADS architecture</em></td>
+</tr>
+</tbody>
+</table>
+<p>This view stresses on how RSS acts as a Doer-Checker on the <em>Plan Subsystem</em>.
+At a high level, RSS accomplishes this by doing three key things:</p>
+<ol>
+<li>Define a safety envelope around the car; the minimum distance, longitudinally and laterally, that should be maintained to avoid danger.
+By doing this, establish the so called Danger Threshold: the moment in time that the safety envelope has been compromised.</li>
+<li>RSS acts as a Doer-Checker on the <em>Plan Subsystem</em> of an ADS. With the safety envelope defined, the question is asked: will the planned action compromise that envelope? Is the proposed action unsafe?
+If RSS determines it is safe, the ADS can act upon it. If not,</li>
+<li>execute the Proper Response, the third component that defines how the ADS and/or the other party involved must react to get out of the danger and return to a safe state.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="" src="../../images/ad-rss-lib-DoerChecker.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>RSS acting as a Doer-Checker on the planning module</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sense-subsystem">Sense Subsystem<a class="headerlink" href="#sense-subsystem" title="Permanent link">&para;</a></h2>
+<p>The <em>Sense Subsystem</em> is responsible for the perception of the environment. It
+interfaces to the real world by receiving, processing and fusing sensor information. It provides all information in form
+of the world model to the other ADS subsystems. The exact content of the world model data is highly dependent on the
+concrete realization of the receiving and processing subsystems, especially the degree of perception and fusion applied will differ.
+The provided world model data might include raw sensor data, high level object data, but also a-priori knowledge such as
+AD map data. To account for this the <em>Sense Subsystem</em> provides separate output ports for every connected subsystem.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>sensorData</td>
+<td>The sensor input from the real vehicle or connected simulation</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>planWorldModelData</td>
+<td>The world model data required by the <em>Plan Subsystem</em></td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssWorldModelData</td>
+<td>The world model data required by the <em>RSS Subsystem</em></td>
+</tr>
+</tbody>
+</table>
+<h4>Extract RSS World Model</h4>
+<p>The <em>Extract RSS World Model</em> entity is responsible to transform the internal world model data of the <em>Sense subsytem</em> into the input world model data rssWorldModelData <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1world_1_1WorldModel.html">ad::rss::world::WorldModel</a> required by the <em>RSS Subsystem</em>.
+The user has to implement this functionality as part of the RSS integration efforts into the ADS system.
+The <a href="../../ad_rss_map_integration/Main/"><em>ad_rss_map_integration</em> library</a> provides an example implementation based on automated driving maps on how such might be
+calculated and how the global Cartesian data can be transformed into a lane based representation.</p>
+<h2 id="rss-subsystem">RSS Subsystem<a class="headerlink" href="#rss-subsystem" title="Permanent link">&para;</a></h2>
+<p>The <em>RSS Subsystem</em> realizes the core RSS functionality. It implements the RSS checks based on the <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1world_1_1WorldModel.html">ad::rss::world::WorldModel</a>
+received from the <em>Extract RSS World Model</em> entity:</p>
+<ol>
+<li>Do not his someone from behind</li>
+<li>Do not cut-in recklessly</li>
+<li>Right-of-Way is given, not taken</li>
+<li>Be careful in areas with limited visibility [not implemented yet]</li>
+<li>If you can avoid a crash without causing another, you must [not implemented yet]</li>
+</ol>
+<p>In case a dangerous situation is detected a proper response and respective acceleration restrictions
+are calculated to enable the realization of the planning safety on the actuator control commands
+of the <em>Plan Subsystem</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>rssWorldModelData</td>
+<td>The world model data required to calculate the RSS checks</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssProperResponse</td>
+<td>The proper response calculated by RSS</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssAccelerationRestrictions</td>
+<td>The restrictions on the vehicle acceleration calculated by RSS</td>
+</tr>
+</tbody>
+</table>
+<h4>Extract Situations</h4>
+<p>The <em>Extract Situations</em> entity transforms the world model data into individual RssSituations between
+the ego vehicle and each of the objects. For every scene <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1world_1_1Scene.html">ad::rss::world::Scene</a> of the input world model data the individual
+(relative) situation <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1situation_1_1Situation.html">ad::rss::situation::Situation</a> is calculated.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>rssWorldModelData</td>
+<td>Lane based world model scenes on the surrounding environment required to create the situation based coordinate system. Requires local map data (i.e. lane segments and semantics on intersections and priority rules), ego vehicle and object (i.e. position, velocity and RSS dynamics) information.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssSituations</td>
+<td>A list of individual RSS Situations between the ego vehicle and each of the objects. Each situation is formulated within its own situation based coordinate system. EgoVehicle and Objects: i.e. (relative) position, velocity, priority flag, situation specific RSS acceleration values.</td>
+</tr>
+</tbody>
+</table>
+<h4>Check Situations</h4>
+<p>The <em>Check Situations</em> entity performs the RSS check on all incoming individual RssSituations and creates the
+RssStates <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1state_1_1RssState.html">ad::rss::state::RssState</a> containing the required responses if dangerous situations are detected.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>rssSituations</td>
+<td>A list of individual RSS Situations between the ego vehicle and each of the objects.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssStates</td>
+<td>A list of RSS states in respect to the individual RSS Situations including situation specific responses.</td>
+</tr>
+</tbody>
+</table>
+<h4>Resolve and Transform Responses</h4>
+<p>The <em>Resolve and Transform Responses</em> entity handles conflicts of the incoming RssStates. It combines the individual
+situation specific responses into one single overall RssProperResponse <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1state_1_1ProperResponse.html">ad::rss::state::ProperResponse</a> and transforms
+these into RssAccelerationRestrictions <a href="https://intel.github.io/ad-rss-lib/doxygen/ad_rss/structad_1_1rss_1_1world_1_1AccelerationRestriction.html">ad::rss::world::AccelerationRestriction</a> for the actuator commands.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>rssStates</td>
+<td>A list of RssStates in respect to the individual RssSituations</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssProperResponse</td>
+<td>Resulting combined overall proper response</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>rssAccelerationRestrictions</td>
+<td>The resulting restrictions of the actuator control command</td>
+</tr>
+</tbody>
+</table>
+<h2 id="plan-subsystem">Plan Subsystem<a class="headerlink" href="#plan-subsystem" title="Permanent link">&para;</a></h2>
+<p>The <em>Plan subsystem</em> performs the decision-making of the ADS. It analyses the
+provided planWorldModelData and decides what action to take. Finally, this leads to concrete control commands for the
+ADS <em>Act Subsystem</em> defining the next move of the ADS.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>planWorldModelData</td>
+<td>The world model data required by the <em>Plan Subsystem</em></td>
+</tr>
+<tr>
+<td>Output</td>
+<td>actuatorControlCommand</td>
+<td>The control commands to realize the next moves within the current plan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="act-subsystem">Act Subsystem<a class="headerlink" href="#act-subsystem" title="Permanent link">&para;</a></h2>
+<p>The <em>Act Subsystem</em> executes the moves which the <em>Plan Subsystem</em> has calculated. It receives the ActuatorControlCommands controlling i.e.
+acceleration, braking and steering to execute the plan.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>actuatorControlCommand</td>
+<td>The control commands to realize the next moves within the current plan.</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>rssAccelerationRestrictions</td>
+<td>The restrictions on the acceleration for the vehicle calculated by RSS.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>controlData</td>
+<td>The control output for the real vehicle or connected simulation</td>
+</tr>
+</tbody>
+</table>
+<h4>Enforce RSS Restrictions</h4>
+<p>The <em>Enforce RSS Restrictions</em> entity receives the actuator control commands from the <em>Plan Subsystem</em> and restricts
+the control values according to the restrictions calculated by RSS. The resulting actuator control commands are safe in
+respect to RSS rules. This calculation heavily depends on the actual representation of the ActuatorControlCommands data.
+Therefore, a generic implementation is not possible and the user has to implement this functionality as part of
+the RSS integration efforts into the ADS.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Name</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>rssAccelerationRestrictions</td>
+<td>The restrictions on the acceleration for the vehicle calculated by RSS.</td>
+</tr>
+<tr>
+<td>Input</td>
+<td>actuatorControlCommandIn</td>
+<td>The control commands from the <em>Plan Subsystem</em> to control the vehicle actuator system</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>actuatorControlCommandOut</td>
+<td>The adapted control commands from the <em>Plan Subsystem</em> to control the vehicle actuator system in a RSS safe manner</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../UnstructuredConstellations/" class="btn btn-neutral float-left" title="Unstructured Constellations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../HLD-Safety/" class="btn btn-neutral float-right" title="Safety">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/intel/ad-rss-lib" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../UnstructuredConstellations/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../HLD-Safety/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
